@@ -1,0 +1,44 @@
+{
+  "name": "my-app",
+  "productName": "my-app",
+  "version": "1.0.0",
+  "description": "electron app",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build": "electron-builder --win"
+  },
+  "keywords": [
+    "electron",
+    "windows",
+    "build"
+  ],
+  "author": "matias",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.tunombre.miapp",
+    "productName": "HK HACK GUI",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "deleteAppDataOnUninstall": true
+    }
+  }
+}
